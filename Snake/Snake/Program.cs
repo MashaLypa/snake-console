@@ -31,6 +31,16 @@ namespace Snake
 
             numList.RemoveAt(0);
 
+            List<char> symList = new List<char>();
+            symList.Add('*');
+            symList.Add('-');
+            symList.Add('#');
+
+            foreach (char i in symList)
+            {
+                Console.WriteLine(i);
+            }
+
             List<Point> pList = new List<Point>();
             pList.Add(p1);
             pList.Add(p2);
