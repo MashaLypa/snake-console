@@ -18,6 +18,10 @@ namespace Snake
             HorizontalLine line = new HorizontalLine(5, 10, 8, '+'); //крайняя левая 5, правая 10, в 8-й строке
             line.DrawLine();
 
+            VerticalLine line2 = new VerticalLine(5, 9, 12, '0');
+            line2.DrawLine();
+
+
             Console.ReadLine();
         }
     }
