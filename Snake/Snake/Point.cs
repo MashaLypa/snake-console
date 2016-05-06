@@ -47,6 +47,12 @@ namespace Snake
             Console.Write(sym);
         }
 
+        public void Clear()
+        {
+            sym = ' ';
+            DrawPoint();
+        }
+
         public override string ToString()
         {
             return x + ", " + y + ", " + sym;
