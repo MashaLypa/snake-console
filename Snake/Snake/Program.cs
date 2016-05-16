@@ -27,15 +27,27 @@ namespace Snake
             Snake snake = new Snake(p, 4, Direction.RIGHT);
             snake.DrawLine();
 
+            FoodCreator foodCreator = new FoodCreator(80, 25, '$');
+            Point food = foodCreator.CreateFood();
+            food.DrawPoint();
+
             while (true)
             {
+                if (snake.Eat(food))
+                {
+                    food = foodCreator.CreateFood();
+                    food.DrawPoint();
+                }
+                else
+                    snake.Move();
+
+                Thread.Sleep(100);
+
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
                     snake.HandleKey(key.Key);
                 }
-                Thread.Sleep(100);
-                snake.Move();
             }
         }
     }
