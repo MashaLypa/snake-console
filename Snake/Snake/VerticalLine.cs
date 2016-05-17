@@ -5,10 +5,8 @@ using System.Text;
 
 namespace Snake
 {
-    class VerticalLine
+    class VerticalLine : Figure
     {
-        List<Point> pList;
-
         public VerticalLine(int x, int yUp, int yDown, char sym)
         {
             pList = new List<Point>();
@@ -16,14 +14,6 @@ namespace Snake
             {
                 Point p = new Point(x, y, sym); //создаем точки от нижней до верхней
                 pList.Add(p); //добавляем в список точек
-            }
-        }
-
-        public void DrawLine()
-        {
-            foreach (Point p in pList)
-            {
-                p.DrawPoint();
             }
         }
     }

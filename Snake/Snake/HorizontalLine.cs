@@ -5,10 +5,8 @@ using System.Text;
 
 namespace Snake
 {
-    class HorizontalLine
+    class HorizontalLine : Figure
     {
-        List<Point> pList;
-
         public HorizontalLine(int xLeft, int xReight, int y, char sym)
         {
             pList = new List<Point>();
@@ -16,14 +14,6 @@ namespace Snake
             {
                 Point p = new Point(x, y, sym); //создаем точки от крайней левой до крайней правой
                 pList.Add(p); //добавляем в список точек
-            }
-        }
-
-        public void DrawLine()
-        {
-            foreach (Point p in pList)
-            {
-                    p.DrawPoint();
             }
         }
     }
