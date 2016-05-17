@@ -20,7 +20,7 @@ namespace Snake
             Snake snake = new Snake(p, 4, Direction.RIGHT);
             snake.DrawLine();
 
-            FoodCreator foodCreator = new FoodCreator(80, 25, '$');
+            FoodCreator foodCreator = new FoodCreator(80, 25, '*');
             Point food = foodCreator.CreateFood();
             food.DrawPoint();
 
